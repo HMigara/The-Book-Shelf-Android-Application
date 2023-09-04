@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TheBookShelf</string>
+
+    <string-array name="spinner">
+        <item>Cash</item>
+        <item>Card</item>
+        <item>Online</item>
+    </string-array>
+    <string name="title_activity_branch_maps">BranchMapsActivity</string>
+
+</resources>

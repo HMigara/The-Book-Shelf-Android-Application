@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/loginbackground"
+    tools:context=".Admin.AdminLoginActivity">
+
+    <TextView
+        android:id="@+id/txtwelcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="false"
+        android:layout_centerVertical="false"
+        android:layout_marginTop="400px"
+        android:gravity="center"
+        android:text="Welcome as a Admin"
+        android:textSize="34sp" />
+
+    <EditText
+        android:id="@+id/txtAdminloginUname"
+        android:layout_width="1100px"
+        android:layout_height="250px"
+        android:text="Haritha"
+        android:layout_below="@+id/txtwelcome"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200px"
+        android:background="@android:drawable/editbox_background"
+        android:backgroundTint="@color/peach"
+        android:hint="User name" />
+
+    <EditText
+        android:layout_width="1100px"
+        android:layout_height="250px"
+        android:layout_below="@+id/txtAdminloginUname"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100px"
+        android:text="NIBM"
+        android:background="@android:drawable/editbox_background"
+        android:backgroundTint="@color/peach"
+        android:id="@+id/txtAdminloginpassword"
+        android:inputType="textPassword"
+        android:hint="Password" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/layoutbtn"
+        android:layout_below="@+id/txtAdminloginpassword">
+
+    <Button
+        android:layout_width="500px"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="100px"
+
+        android:layout_below="@+id/txtAdminloginpassword"
+        android:backgroundTint="@color/black"
+        android:id="@+id/btnadminlogin"
+        android:layout_marginTop="200px"/>
+
+    <Button
+        android:layout_width="500px"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/btnadminlogin"
+        android:backgroundTint="@color/black"
+        android:layout_marginLeft="300px"
+
+        android:id="@+id/btnadminBack"
+        android:layout_marginTop="200px"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Don't have account?"
+        android:layout_below="@+id/layoutbtn"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/txtrgister"
+        android:onClick="registerAdmin"/>
+
+    <Button
+        android:id="@+id/btnregister"
+        android:layout_width="370px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtAdminloginpassword"
+        android:layout_alignBaseline="@+id/txtrgister"
+        android:layout_centerHorizontal="true"
+        android:layout_toEndOf="@+id/txtrgister"
+        android:background="@android:drawable/menuitem_background"
+        android:backgroundTintMode="add"
+        android:onClick="registerUser"
+        android:text="Register"
+        android:textColor="#FF0000" />
+
+
+
+</RelativeLayout>

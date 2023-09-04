@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/loginbackground"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/txtwelcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="false"
+        android:layout_centerVertical="false"
+        android:layout_marginTop="400px"
+        android:gravity="center"
+        android:text="User Registation"
+        android:layout_marginBottom="20dp"
+        android:textSize="34sp" />
+
+    <EditText
+        android:id="@+id/txtuserFirstName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background"
+        android:backgroundTint="@color/peach"
+        android:layout_marginBottom="20dp"
+        android:hint="First Name"/>
+
+    <EditText
+        android:id="@+id/txtuserLastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background"
+        android:backgroundTint="@color/peach"
+        android:layout_marginBottom="20dp"
+        android:hint="Last Name"/>
+
+    <EditText
+        android:id="@+id/txtuserUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background"
+        android:backgroundTint="@color/peach"
+        android:layout_marginBottom="20dp"
+        android:hint="User Name"/>
+
+    <EditText
+        android:id="@+id/txtuserEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background"
+        android:backgroundTint="@color/peach"
+        android:layout_marginBottom="20dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress"/>
+
+    <EditText
+        android:id="@+id/txtuserPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background"
+        android:backgroundTint="@color/peach"
+        android:layout_marginBottom="20dp"
+        android:hint="Password"
+        android:inputType="textPassword"/>
+
+    <EditText
+        android:id="@+id/txtuserLocation"
+        android:layout_width="match_parent"
+        android:background="@android:drawable/editbox_background"
+        android:backgroundTint="@color/peach"
+        android:layout_marginBottom="20dp"
+        android:layout_height="wrap_content"
+        android:hint="Location"/>
+
+    <EditText
+        android:id="@+id/txtuserMobileNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background"
+        android:backgroundTint="@color/peach"
+        android:layout_marginBottom="20dp"
+        android:hint="Mobile Number"
+        android:inputType="phone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <Button
+        android:layout_width="500px"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:id="@+id/btnUserregister"
+        android:layout_gravity="center"
+        android:onClick="onRegisterClick"/>
+
+        <Button
+            android:layout_width="500px"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="300px"
+            android:backgroundTint="@color/black"
+            android:id="@+id/btnUserregiBack"
+            />
+    </LinearLayout>
+
+</LinearLayout>

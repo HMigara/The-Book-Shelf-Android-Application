@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/loginbackground"
+    tools:context=".Admin.AdminLoginActivity">
+
+    <TextView
+        android:id="@+id/txtwelcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="false"
+        android:layout_centerVertical="false"
+        android:layout_marginTop="300px"
+        android:fontFamily="@font/baskervville"
+        android:gravity="center"
+        android:text="Welcome to                       the bookshelf                                      as a User"
+        android:textSize="34sp" />
+
+    <EditText
+        android:id="@+id/txtuserlogemail"
+        android:layout_width="1100px"
+        android:layout_height="250px"
+        android:layout_below="@+id/txtwelcome"
+        android:layout_centerHorizontal="true"
+        android:text="Huser"
+        android:layout_marginTop="100px"
+        android:background="@android:drawable/editbox_background"
+        android:backgroundTint="@color/peach"
+        android:hint="User name" />
+
+    <EditText
+        android:layout_width="1100px"
+        android:layout_height="250px"
+        android:layout_below="@+id/txtuserlogemail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100px"
+        android:text="NIBM"
+        android:background="@android:drawable/editbox_background"
+        android:backgroundTint="@color/peach"
+        android:id="@+id/txtuserlogpassword"
+        android:inputType="textPassword"
+        android:hint="Password" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/layoutbtn"
+        android:layout_below="@+id/txtuserlogpassword">
+
+    <Button
+        android:id="@+id/btnuserloglogin"
+        android:layout_width="500px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtuserlogpassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="100px"
+        android:layout_marginTop="100px"
+        android:backgroundTint="@color/black"
+        android:text="Login" />
+
+    <Button
+        android:layout_width="500px"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/btnuserloglogin"
+        android:layout_marginTop="100px"
+        android:layout_marginLeft="300px"
+        android:backgroundTint="@color/black"
+        android:id="@+id/btnuserBack"
+        />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Don't have account?"
+        android:layout_below="@+id/layoutbtn"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/txtrgister"
+        android:onClick="registerUser"/>
+
+    <Button
+        android:id="@+id/btnregister"
+        android:layout_width="370px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtuserlogpassword"
+        android:layout_alignBaseline="@+id/txtrgister"
+        android:layout_centerHorizontal="true"
+        android:layout_toEndOf="@+id/txtrgister"
+        android:background="@android:drawable/menuitem_background"
+        android:textColor="#FF0000"
+        android:backgroundTintMode="multiply"
+        android:onClick="registerUser"
+        android:text="Register" />
+
+
+
+
+</RelativeLayout>

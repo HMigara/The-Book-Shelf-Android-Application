@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white"
+    tools:context=".Admin.AdminHomeActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:src="@drawable/admin_logo"
+        android:layout_gravity="center"
+        android:layout_marginBottom="24dp"/>
+
+    <Button
+        android:id="@+id/btnAddBook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Book"
+        android:layout_marginBottom="16dp"/>
+
+    <!--<Button
+        android:id="@+id/btnDeleteBook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delete Book"
+        android:layout_marginBottom="16dp"/>-->
+
+    <!--<Button
+        android:id="@+id/btnUpdateBook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update Book"
+        android:layout_marginBottom="16dp"/>-->
+
+    <Button
+        android:id="@+id/btnViewBook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Manage Books"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btnUpdateBranchInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update Branch Info"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Book Shelf 0.0.1V"
+        android:gravity="center"
+        android:layout_marginTop="50dp"/>
+
+
+</LinearLayout>

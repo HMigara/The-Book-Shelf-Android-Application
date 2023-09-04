@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/loginbackground"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+    <TextView
+        android:id="@+id/txtwelcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="false"
+        android:layout_centerVertical="false"
+        android:layout_marginTop="400px"
+        android:gravity="center"
+        android:text="Admin Registation"
+        android:layout_marginBottom="20dp"
+        android:textSize="34sp" />
+
+    <EditText
+        android:id="@+id/txtaAdminFirstName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background"
+        android:backgroundTint="@color/peach"
+        android:layout_marginBottom="20dp"
+        android:hint="First Name"/>
+
+    <EditText
+        android:id="@+id/txtaAdminLastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background"
+        android:backgroundTint="@color/peach"
+        android:layout_marginBottom="20dp"
+        android:hint="Last Name"/>
+
+    <EditText
+        android:id="@+id/txtaAdminuname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background"
+        android:backgroundTint="@color/peach"
+        android:layout_marginBottom="20dp"
+        android:hint="User Name"/>
+
+    <EditText
+        android:id="@+id/txtaAdminEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background"
+        android:backgroundTint="@color/peach"
+        android:layout_marginBottom="20dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress"/>
+
+    <EditText
+        android:id="@+id/txtaAdminPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background"
+        android:backgroundTint="@color/peach"
+        android:layout_marginBottom="20dp"
+        android:hint="Password"
+        android:inputType="textPassword"/>
+
+    <EditText
+        android:id="@+id/txtaAdminLocation"
+        android:layout_width="match_parent"
+        android:background="@android:drawable/editbox_background"
+        android:backgroundTint="@color/peach"
+        android:layout_marginBottom="20dp"
+        android:layout_height="wrap_content"
+        android:hint="Location"/>
+
+    <EditText
+        android:id="@+id/txtaAdminMobileNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background"
+        android:backgroundTint="@color/peach"
+        android:layout_marginBottom="20dp"
+        android:hint="Mobile Number"
+        android:inputType="phone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <Button
+        android:layout_width="500px"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:id="@+id/btnadminRegister"
+        />
+
+    <Button
+        android:layout_width="500px"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="300px"
+        android:backgroundTint="@color/black"
+        android:id="@+id/btnAdminBack"
+        />
+    </LinearLayout>
+
+</LinearLayout>
+</ScrollView>

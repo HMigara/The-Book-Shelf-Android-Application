@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/loginbackground"
+    tools:context=".welcomeActivity">
+
+    <Button
+        android:id="@+id/btnuser"
+        android:layout_width="700px"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:backgroundTint="@color/black"
+        android:onClick="user"
+        android:text="USER" />
+
+    <Button
+        android:id="@+id/btnadmin"
+        android:layout_width="700px"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnuser"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/black"
+        android:onClick="admin"
+        android:rotationX="0"
+        android:text="ADMIN" />
+
+    <TextView
+        android:id="@+id/txtwelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="cursive"
+        android:text="Welcome to the BookShelf"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="100px"
+        android:paddingTop="500px"/>
+
+    <TextView
+        android:id="@+id/txtsubtxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif-smallcaps"
+        android:layout_below="@+id/txtwelcome"
+        android:text="Log in as a"
+        android:textSize="18sp" />
+</RelativeLayout>
