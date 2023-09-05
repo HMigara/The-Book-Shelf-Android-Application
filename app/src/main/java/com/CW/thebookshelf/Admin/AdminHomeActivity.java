@@ -52,7 +52,9 @@ public class AdminHomeActivity extends AppCompatActivity {
         branchInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //branch info page intent
+                Intent intent = new Intent(AdminHomeActivity.this, BranchInfoActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
     }

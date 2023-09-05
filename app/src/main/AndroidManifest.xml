@@ -20,6 +20,15 @@
         android:theme="@style/Theme.TheBookShelf"
         tools:targetApi="31">
         <activity
+            android:name=".Admin.BranchInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".User.BuyBookActivity"
+            android:exported="false" />
+        <activity
+            android:name=".User.UserCategoryActivity"
+            android:exported="false" />
+        <activity
             android:name=".User.UserSearchActivity"
             android:exported="false" />
         <activity

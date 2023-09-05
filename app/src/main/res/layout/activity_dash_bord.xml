@@ -63,7 +63,7 @@
                     android:backgroundTint="@color/darkblue"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:id="@+id/magazin" />
+                    android:id="@+id/btnCategory" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 

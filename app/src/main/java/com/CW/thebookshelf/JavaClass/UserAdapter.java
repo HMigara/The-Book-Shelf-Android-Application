@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
@@ -14,18 +15,19 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.CW.thebookshelf.Admin.DetailsActivity;
 import com.CW.thebookshelf.R;
+import com.CW.thebookshelf.User.BuyBookActivity;
 import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class MyAdapter extends RecyclerView.Adapter<MyUserViewHolder> {
+public class UserAdapter extends RecyclerView.Adapter<MyUserViewHolder> {
 
     private Context context;
     private List<AddBook> datalist;
 
-    public MyAdapter(Context context, List<AddBook> datalist) {
+    public UserAdapter(Context context, List<AddBook> datalist) {
         this.context = context;
         this.datalist = datalist;
     }
@@ -33,9 +35,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyUserViewHolder> {
     @NonNull
     @Override
     public MyUserViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycle_item,parent,false);
-        //View view1 = LayoutInflater.from(parent.getContext()).inflate(R.layout.user_recycle_view,parent,false);
-        return new MyUserViewHolder(view);
+        View view1 = LayoutInflater.from(parent.getContext()).inflate(R.layout.user_recycle_view,parent,false);
+        return new MyUserViewHolder(view1);
     }
 
 
@@ -50,10 +51,11 @@ public class MyAdapter extends RecyclerView.Adapter<MyUserViewHolder> {
         holder.recCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*String name = datalist.get(holder.getAdapterPosition()).getBname();
-                Toast.makeText(context, String.valueOf(name), Toast.LENGTH_SHORT).show();*/
+                //String name = datalist.get(holder.getAdapterPosition()).getBname();
+                //Toast.makeText(context, "String.valueOf(name)", Toast.LENGTH_SHORT).show();
 
-                Intent intent = new Intent(context, DetailsActivity.class);
+
+                Intent intent = new Intent(context, BuyBookActivity.class);
                 intent.putExtra("bimgurl",datalist.get(holder.getAdapterPosition()).getBimgurl());
                 intent.putExtra("bname",datalist.get(holder.getAdapterPosition()).getBname());
                 intent.putExtra("bcategory",datalist.get(holder.getAdapterPosition()).getBCategory());
@@ -83,12 +85,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyUserViewHolder> {
 
 
 
-class  MyViewHolder extends RecyclerView.ViewHolder{
+class MyUserViewHolder extends RecyclerView.ViewHolder{
 
     ImageView recImg;
     TextView rectitel,recCatg,recdiscrip;
     CardView recCard;
-    public MyViewHolder(@NonNull View itemView) {
+    public MyUserViewHolder(@NonNull View itemView) {
         super(itemView);
 
         recImg = itemView.findViewById(R.id.recImg);

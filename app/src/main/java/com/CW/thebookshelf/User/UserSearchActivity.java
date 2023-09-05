@@ -14,6 +14,7 @@ import com.CW.thebookshelf.Admin.AdminBookViewActivity;
 import com.CW.thebookshelf.Admin.AdminHomeActivity;
 import com.CW.thebookshelf.JavaClass.AddBook;
 import com.CW.thebookshelf.JavaClass.MyAdapter;
+import com.CW.thebookshelf.JavaClass.UserAdapter;
 import com.CW.thebookshelf.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -30,7 +31,7 @@ public class UserSearchActivity extends AppCompatActivity {
     ValueEventListener eventListener;
     RecyclerView recyclerView;
     List<AddBook> dataList;
-    MyAdapter adapter;
+    UserAdapter adapter;
     SearchView searchView;
 
     public void onBackPressed() {
@@ -50,7 +51,7 @@ public class UserSearchActivity extends AppCompatActivity {
         searchView = findViewById(R.id.searchv);
         searchView.clearFocus();
 
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(UserSearchActivity.this, 1);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(UserSearchActivity.this, 2);
         recyclerView.setLayoutManager(gridLayoutManager);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(UserSearchActivity.this);
@@ -61,7 +62,7 @@ public class UserSearchActivity extends AppCompatActivity {
 
         dataList = new ArrayList<>();
 
-        adapter = new MyAdapter(UserSearchActivity.this, dataList);
+        adapter = new UserAdapter(UserSearchActivity.this, dataList);
         recyclerView.setAdapter(adapter);
 
         databaseReference = FirebaseDatabase.getInstance().getReference("Book");

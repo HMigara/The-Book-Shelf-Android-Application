@@ -13,7 +13,7 @@ import com.CW.thebookshelf.welcomeActivity;
 
 public class DashBordActivity extends AppCompatActivity {
 
-    Button BtnViewBranch,BtnLogOut,BtnBook,BtnSearch;
+    Button BtnViewBranch,BtnLogOut,BtnBook,BtnSearch,BtnCategory;
 
     public void onBackPressed() {
         Intent intent = new Intent(DashBordActivity.this, welcomeActivity.class);
@@ -30,11 +30,20 @@ public class DashBordActivity extends AppCompatActivity {
         BtnLogOut = findViewById(R.id.Logout);
         BtnBook = findViewById(R.id.btnBooks);
         BtnSearch = findViewById(R.id.btnsearch);
+        BtnCategory = findViewById(R.id.btnCategory);
 
         BtnViewBranch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(DashBordActivity.this, BranchMapsActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        BtnCategory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DashBordActivity.this, UserCategoryActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -53,7 +62,6 @@ public class DashBordActivity extends AppCompatActivity {
         BtnBook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(DashBordActivity.this, "Book page", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(DashBordActivity.this, UserBookDisplayActivity.class);
                 startActivity(intent);
                 finish();

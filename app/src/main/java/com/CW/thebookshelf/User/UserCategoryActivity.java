@@ -1,4 +1,4 @@
-package com.CW.thebookshelf.Admin;
+package com.CW.thebookshelf.User;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -9,12 +9,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 
+import com.CW.thebookshelf.Admin.AdminBookViewActivity;
+import com.CW.thebookshelf.Admin.AdminHomeActivity;
 import com.CW.thebookshelf.JavaClass.AddBook;
 import com.CW.thebookshelf.JavaClass.MyAdapter;
+import com.CW.thebookshelf.JavaClass.UserAdapter;
 import com.CW.thebookshelf.R;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -24,36 +25,34 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AdminBookViewActivity extends AppCompatActivity {
-
+public class UserCategoryActivity extends AppCompatActivity {
     DatabaseReference databaseReference;
     ValueEventListener eventListener;
     RecyclerView recyclerView;
     List<AddBook> dataList;
-    MyAdapter adapter;
+    UserAdapter adapter;
     SearchView searchView;
 
     public void onBackPressed() {
-        Intent intent = new Intent(AdminBookViewActivity.this, AdminHomeActivity.class);
+        Intent intent = new Intent(UserCategoryActivity.this, DashBordActivity.class);
         startActivity(intent);
         finish();
         super.onBackPressed();
     }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_admin_book_view);
+        setContentView(R.layout.activity_user_category);
 
-        recyclerView = findViewById(R.id.recyclerView);
+        recyclerView = findViewById(R.id.CategoryrecyclerView);
         //fab = findViewById(R.id.fab);
-        searchView = findViewById(R.id.searchv);
+        searchView = findViewById(R.id.Categotysearchview);
         searchView.clearFocus();
 
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(AdminBookViewActivity.this, 1);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(UserCategoryActivity.this, 2);
         recyclerView.setLayoutManager(gridLayoutManager);
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(AdminBookViewActivity.this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(UserCategoryActivity.this);
         builder.setCancelable(false);
         builder.setView(R.layout.progress_layout);
         AlertDialog dialog = builder.create();
@@ -61,11 +60,12 @@ public class AdminBookViewActivity extends AppCompatActivity {
 
         dataList = new ArrayList<>();
 
-        adapter = new MyAdapter(AdminBookViewActivity.this, dataList);
+        adapter = new UserAdapter(UserCategoryActivity.this, dataList);
         recyclerView.setAdapter(adapter);
 
         databaseReference = FirebaseDatabase.getInstance().getReference("Book");
         dialog.show();
+
         eventListener = databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -99,13 +99,12 @@ public class AdminBookViewActivity extends AppCompatActivity {
                 return true;
             }
         });
-
-
     }
+
     public void searchList(String text){
         ArrayList<AddBook> searchList = new ArrayList<>();
         for (AddBook dataClass: dataList){
-            if (dataClass.getBname().toLowerCase().contains(text.toLowerCase())){
+            if (dataClass.getBCategory().toLowerCase().contains(text.toLowerCase())){
                 searchList.add(dataClass);
             }
         }

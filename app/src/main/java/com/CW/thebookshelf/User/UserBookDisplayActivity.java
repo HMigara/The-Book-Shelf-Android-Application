@@ -9,11 +9,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.CW.thebookshelf.Admin.AdminBookViewActivity;
 import com.CW.thebookshelf.Admin.AdminHomeActivity;
 import com.CW.thebookshelf.JavaClass.AddBook;
 import com.CW.thebookshelf.JavaClass.MyAdapter;
+import com.CW.thebookshelf.JavaClass.UserAdapter;
 import com.CW.thebookshelf.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -30,7 +32,7 @@ public class UserBookDisplayActivity extends AppCompatActivity {
     ValueEventListener eventListener;
     RecyclerView recyclerView;
     List<AddBook> dataList;
-    MyAdapter adapter;
+    UserAdapter adapter;
     SearchView searchView;
 
     public void onBackPressed() {
@@ -45,10 +47,10 @@ public class UserBookDisplayActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_book_display);
 
-        recyclerView = findViewById(R.id.recyclerView);
+        recyclerView = findViewById(R.id.recyclerViewUser);
 
 
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(UserBookDisplayActivity.this, 1);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(UserBookDisplayActivity.this, 2);
         recyclerView.setLayoutManager(gridLayoutManager);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(UserBookDisplayActivity.this);
@@ -59,11 +61,12 @@ public class UserBookDisplayActivity extends AppCompatActivity {
 
         dataList = new ArrayList<>();
 
-        adapter = new MyAdapter(UserBookDisplayActivity.this, dataList);
+        adapter = new UserAdapter(UserBookDisplayActivity.this, dataList);
         recyclerView.setAdapter(adapter);
 
         databaseReference = FirebaseDatabase.getInstance().getReference("Book");
         dialog.show();
+        Toast.makeText(UserBookDisplayActivity.this, "Book arrive", Toast.LENGTH_SHORT).show();
        eventListener = databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {

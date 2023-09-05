@@ -56,10 +56,12 @@ public class BranchMapsActivity extends FragmentActivity implements OnMapReadyCa
         LatLng Galle = new LatLng(6.0329, 80.2168);
         LatLng Matara = new LatLng(5.9496, 80.5469);
         LatLng Colombo = new LatLng(6.9271, 79.8612);
+        LatLng Kaluthara = new LatLng(6.5854, 79.9607);
         mMap.addMarker(new MarkerOptions().position(unawatuna).title("Book Shelf unawatuna"));
         mMap.addMarker(new MarkerOptions().position(Galle).title("Book Shelf Galle"));
         mMap.addMarker(new MarkerOptions().position(Matara).title("Book Shelf Matara"));
         mMap.addMarker(new MarkerOptions().position(Colombo).title("Book Shelf Colombo"));
+        mMap.addMarker(new MarkerOptions().position(Kaluthara).title("Book Shelf Kaluthara"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(Galle));
     }
 }
