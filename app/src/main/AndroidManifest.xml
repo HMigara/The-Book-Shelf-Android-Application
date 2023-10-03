@@ -50,7 +50,7 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyBFKziZf36bv1tGA9iTZEtcpW5LxAHl1AA" />
+            android:value="Set your google API key here to work with the google map" />
 
         <activity
             android:name=".User.BranchMapsActivity"
